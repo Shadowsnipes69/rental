@@ -7,7 +7,7 @@
                 <?= $_SESSION['message'] ?>
             </div>
             <?php
-            session_destroy();
+            unset($_SESSION['message'], $_SESSION['email']);
              endif; ?>
         <label for="email">Uw e-mail</label>
         <input type="email" name="email" id="email" placeholder="johndoe@gmail.com" value="<?= isset($_SESSION['email']) ? htmlspecialchars($_SESSION['email']) : '' ?>" required autofocus>
